@@ -9,9 +9,9 @@ RUN yum install -y https://repo.ius.io/ius-release-el7.rpm && \
 
 # Install Ansible
 RUN curl https://bootstrap.pypa.io/get-pip.py -o /tmp/get-pip.py && \
-	python /tmp/get-pip.py --user && \
-	python -m pip install --user ansible && \
-	python -m pip install --user paramiko && \
+	python3 /tmp/get-pip.py --user && \
+	python3 -m pip install --user ansible && \
+	python3 -m pip install --user paramiko && \
 	ansible --version
 
 
